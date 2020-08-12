@@ -1,0 +1,18 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_S3_OBJECTS_AGED",
+  "ConnectorEngine":"SQL",
+  "DatabaseIdentifier": "PowerBIQA",
+  "ConnectorType":"StoredProcedure",
+  "Connector":"AWS_S3_OBJECTS_AGED",
+  "InputParameters": {
+     "DaysElapsed": {
+        "type": "number",
+        "label": "DaysElapsed",
+        "description": "Number of days",
+        "constraints": [
+          {"range": {"min": 30, "max": 100}}
+        ]
+      }
+   }
+}
